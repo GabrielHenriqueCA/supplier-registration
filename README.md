@@ -69,6 +69,6 @@ Contributions to Supplier Registrations are welcome! If you would like to contri
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
----
 
+---
 Thank you for choosing Supplier Registrations! We hope this basic project simplifies the management of supplier information and serves as a solid foundation for further enhancements and customizations.
