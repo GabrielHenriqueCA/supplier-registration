@@ -53,7 +53,7 @@ To get started with Supplier Registrations, follow these steps:
 7. Build and run the application using the appropriate tools for the .NET framework.
 
 ## Contributing
-Contributions are welcome! Please see the [CONTRIBUTING](CONTRIBUTING) file for more information.
+Contributions are welcome! Please see the [CONTRIBUTING](CONTRIBUTING.md) file for more information.
 
 ## License
 
