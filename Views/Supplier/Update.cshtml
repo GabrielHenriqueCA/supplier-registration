@@ -1,0 +1,47 @@
+﻿@using SupplierRegistration.Model;
+@model SupplierModel
+
+@{
+    ViewData["Title"] = "Update Suppliers";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Update Suppliers</h1>
+
+</div>
+
+<form asp-controller="Supplier" asp-action="UpdateSupplier" method="post">
+
+    <input type="hidden" asp-for="Id"/>
+    <div class="mb-3">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="inputName" placeholder="John Doe">
+        @Html.ValidationMessageFor(x => x.Name)
+    </div>
+    <div class="mb-3">
+        <label for="inputCnpj" class="form-label">CNPJ</label>
+        <input type="text" asp-for="Cnpj" class="form-control" id="inputCnpj" placeholder="12345678901234">
+        @Html.ValidationMessageFor(x => x.Cnpj)
+    </div>
+    <div class="mb-3">
+        <label for="inputSpeciality" class="form-label">Speciality</label>
+        <select class="form-select" asp-for="SpecialtySupplier"  id="inputSpeciality">
+            <option selected value="Commerce">Commerce</option>
+            <option value="Service">Service</option>
+            <option value="Industry">Industry</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="inputCep" class="form-label">CEP</label>
+        <input type="text" asp-for="Cep" class="form-control" id="inputCep" placeholder="12345678">
+        @Html.ValidationMessageFor(x => x.Cep)
+    </div>
+    <div class="mb-3">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" asp-for="Address" id="inputAddress" placeholder="123 Main St">
+        @Html.ValidationMessageFor(x => x.Address)
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+    <a class="btn btn-secondary w-100" role="button" asp-controller="Supplier" asp-action="Index">Back</a>
+</form>

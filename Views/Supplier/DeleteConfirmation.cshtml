@@ -1,0 +1,15 @@
+﻿@using SupplierRegistration.Model;
+@model SupplierModel
+@{
+    ViewData["Title"] = "Delete Supplier";
+}
+
+<div class="text-center"> 
+    <input type="hidden" asp-for="Id"/>
+    <h3>I would really like to <b>DELETE</b> (@Model.Name) ? </h3>
+
+    <a role="button" asp-controller="Supplier" asp-action="DeleteSupplier" asp-route-id="@Model.Id" class="btn btn-danger w-100">Delete</a>
+    <a class="btn btn-primary w-100" role="button" asp-controller="Supplier" asp-action="Index">Back</a>
+</div>
+
+

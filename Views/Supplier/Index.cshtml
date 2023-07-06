@@ -1,0 +1,70 @@
+﻿@using SupplierRegistration.Model;
+@model IEnumerable<SupplierModel>
+@{
+    ViewData["Title"] = "All Suppliers Active";
+}
+
+<div class="text-center">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start" >
+        <a class="btn btn-primary" role="button" asp-controller="Supplier" asp-action="Create">Add New Supplier</a>
+    </div>
+
+    <br/>
+
+    @if(TempData["MessageSuccessyfull"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+            @TempData["MessageSuccessyfull"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <br/>
+
+    <h1 class="display-4">Suppliers Active</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Cnpj</th>
+                <th scope="col">Speciality</th>
+                <th scope="col">Cep</th>
+                <th scope="col">Address</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (SupplierModel supplier in Model)
+                {
+                    <tr>
+                        <td scope="row">@supplier.Id</td>
+                        <td>@supplier.Name</td>
+                        <td>@supplier.Cnpj</td>
+                        <td>@supplier.SpecialtySupplier</td>
+                        <td>@supplier.Cep</td>
+                        <td>@supplier.Address</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-primary" asp-route-id="@supplier.Id" asp-controller="Supplier" asp-action="Update">Update</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@supplier.Id" asp-controller="Supplier" asp-action="DeleteConfirmation">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
