@@ -52,19 +52,8 @@ To get started with Supplier Registrations, follow these steps:
 
 7. Build and run the application using the appropriate tools for the .NET framework.
 
-## Contribution Guidelines
-
-Contributions to Supplier Registrations are welcome! If you would like to contribute to the project, please follow these guidelines:
-
-1. Fork the repository.
-
-2. Create a new branch for your feature or bug fix.
-
-3. Commit your changes with descriptive commit messages.
-
-4. Push your branch to your forked repository.
-
-5. Submit a pull request, explaining the changes you have made.
+## Contributing
+Contributions are welcome! Please see the [CONTRIBUTING](CONTRIBUTING) file for more information.
 
 ## License
 
